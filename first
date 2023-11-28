@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let obj1 = { name: "Person 1", age: 5 }; 
+    let obj2 = { age: 5, name: "Person 1" };
+
+    function compareJSON(obj1, obj2) {
+  
+     let jsonStr1 = JSON.stringify(obj1);
+     let jsonStr2 = JSON.stringify(obj2);
+
+  
+     let sortedStr1 = jsonStr1.split('').sort().join('');
+     let sortedStr2 = jsonStr2.split('').sort().join('');
+
+  
+      return sortedStr1 === sortedStr2;
+}
+
+     let Equal = compareJSON(obj1, obj2);
+     console.log(Equal);
+</script>
+
+</body>
+</html>
